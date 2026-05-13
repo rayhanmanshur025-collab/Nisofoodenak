@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Kontak NisoFood - No.1 Traditional Frozen Food</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ========== PRELOADER / LOADING PAGE ========== */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #c0392b, #e67e22);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loader-icon {
+            font-size: 70px;
+            animation: bounce 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loader-text {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .loader-progress {
+            width: 250px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .loader-progress-bar {
+            width: 0%;
+            height: 100%;
+            background: white;
+            border-radius: 10px;
+            animation: loading 1.5s ease-in-out forwards;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        .loader-dots {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .loader-dots span {
+            animation: dots 1.5s infinite;
+        }
+        
+        .loader-dots span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .loader-dots span:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        @keyframes dots {
+            0%, 20% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .main-content.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PRELOADER / LOADING PAGE -->
+<div class="preloader" id="preloader">
+    <div class="loader-content">
+        <div class="loader-icon">
+            <i class="fas fa-ice-cream"></i>
+        </div>
+        <div class="loader-text">NisoFood</div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar"></div>
+        </div>
+        <div class="loader-dots">
+            Loading<span>.</span><span>.</span><span>.</span>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content" id="mainContent">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-ice-cream"></i>
+            <h1>NisoFood</h1>
+            <p>Warisan Rasa Nusantara</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="about.html">📖 Tentang</a></li>
+            <li><a href="produk.html">🍽️ Produk</a></li>
+            <li><a href="kontak.html">📞 Kontak</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span>
+        </div>
+    </nav>
+x`
+    <div class="container contact-page">
+        <h2><i class="fas fa-address-card"></i> Hubungi Kami</h2>
+        <div class="contact-card">
+            <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp Admin:</strong> <a href="https://wa.me/6285810822897" target="_blank">+62858-1082-2897</a></p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> nisofood@rajawali.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. Masjid Nurul Falah No. 58, Bojongsari Lama, Kecamatan Bojongsari, Kota Depok, Jawa Barat</p>
+            <p><i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin - Sabtu (08.00 - 16.00)</p>
+            
+            <!-- MAP LINK LANGSUNG BUKA GOOGLE MAPS -->
+            <a href="https://maps.google.com/?q=-6.407764161810817, 106.74033410847235" target="_blank" class="map-button">
+                <i class="fas fa-map"></i> Buka Lokasi di Google Maps
+            </a>
+            
+            <button class="btn-primary" onclick="window.location.href='produk.html'"><i class="fas fa-shopping-bag"></i> 🛍️ Belanja Sekarang</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <i class="fas fa-ice-cream" style="font-size: 35px; margin-bottom: 10px; color: #ffaa66;"></i>
+            <h4>NisoFood</h4>
+            <p>No.1 Traditional Frozen Food</p>
+            <p>Warisan rasa yang dibekukan dengan cinta</p>
+            <div class="logo-halal">
+                <i class="fas fa-certificate" style="font-size: 24px; color: #2e7d32;"></i>
+                <i class="fas fa-check-circle" style="font-size: 20px; color: #f39c12;"></i>
+                <span style="display: block; font-size: 12px; margin-top: 8px;">✓ Bersertifikat Halal ✓</span>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4><i class="fas fa-address-card"></i> Kontak Kami</h4>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/62851718769301" target="_blank">0857-1876-9301</a></p>
+            <p><i class="fas fa-envelope"></i> nisofoodofficial@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Depok, Indonesia</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4><i class="fas fa-share-alt"></i> Ikuti Kami</h4>
+            <p><i class="fab fa-instagram"></i> @nisofood_id</p>
+            <p><i class="fab fa-tiktok"></i> @nisofoodofficial</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 NisoFood - Rasa Nusantara Otentik | Selalu Dingin, Selalu Lezat</p>
+        <div class="halal-badge">
+            <i class="fas fa-certificate"></i> HALAL <i class="fas fa-certificate"></i>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Overlay dan Sidebar Keranjang -->
+<div class="overlay" id="overlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <span><i class="fas fa-shopping-bag"></i> Keranjang Belanja</span>
+        <button id="closeCartBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="cartItemsList" class="cart-items"></div>
+    <div class="cart-total" id="cartTotal">Total: Rp 0</div>
+    <button class="checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Beli via WhatsApp</button>
+    <button class="close-cart" id="closeCartBottom">Tutup</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Hilangkan loading setelah halaman siap
+    window.addEventListener("load", function() {
+        setTimeout(function() {
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.getElementById("mainContent");
+            preloader.classList.add("hide");
+            mainContent.classList.add("show");
+        }, 500);
+    });
+</script>
+</body>
+</html>
